@@ -37,7 +37,7 @@ module.exports.Login = async (req, res, next) => {
       if (!auth) {
         return res.json({message:'Incorrect password or email' }) 
       }
-      else {
+      
         
       
        const token = createSecretToken(user._id);
@@ -46,9 +46,9 @@ module.exports.Login = async (req, res, next) => {
          withCredentials: true,
          httpOnly: false,
        });
-       return res.status(201).json({ message: "User logged in successfully", success: true });
+       res.status(201).json({ message: "User logged in successfully", success: true });
        next()
-      }
+      
     } catch (error) {
       console.error(error);
     }
