@@ -48,6 +48,9 @@ app.get("/allHoldings", async (req, res) => {
     let allPositions = await PositionsModel.find({});
     res.json(allPositions);
   });
+app.get("/",(req,res)=>{
+  res.send("hello i am backend")
+})
 
   // app.get("/delUser", async (req, res) => {
   //   let allPositions = await UserModel.deleteAll({});
