@@ -26,7 +26,7 @@ app.listen(PORT, () => {
 
 
 const corsOptions ={
-  origin: ["http://localhost:5173"],
+  origin: ["https://dashboard-m9af.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }
